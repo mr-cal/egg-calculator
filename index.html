@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Cal's Egg Calculator - for egg prices at the store</title>
+        <meta name="description" content="Cal's egg calculator is for comparing egg prices at stores that list price per count, not price per weight." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/regular.css" integrity="sha384-z3ccjLyn+akM2DtvRQCXJwvT5bGZsspS4uptQKNXNg778nyzvdMqiGcqHVGiAUyY" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">  
+        <script src="scripts.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-P947160S1Q"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-P947160S1Q');
+        </script>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+
+    <body>
+        <div class="flexContainer">
+            <div class="content">
+                <h1>cal's egg calculator</h1>
+                <table id="eggTable">
+                    <thead>
+                        <tr>
+                            <th class="col1">price</th>
+                            <th class="col2"># eggs</th>
+                            <th class="col3">size</th>
+                            <th class="col4"></th>
+                            <th class="col5">result</th>
+                            <th class="col6"></th>
+                        </tr>
+                    </thead>
+                </table>
+                <i class="far fa-plus-square" id="addButton"></i>
+            </div>
+            <div class="footer">
+                <span id="unitsButton" class="footerButton">
+                    change units
+                </span>
+                <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <span id="aboutButton" class="footerButton">
+                    about
+                </span>
+            </div>
+        </div>
+        <div class="popUp" id="unitsPopUp">
+            <div id="hideUnitsPopUp"><i class="fas fa-times"></i></div>
+            <select id="weightUnitTable" size="2">
+                <option value="std" selected>imperial</option>
+                <option value="met">metric</option>
+            </select>
+        </div>
+        <div class="popUp" id="aboutPopUp">
+            <div id="hideAboutPopUp"><i class="fas fa-times"></i></div>
+            <div class="aboutText">
+                Cal's egg calculator is for comparing egg prices at stores that list price per count, not price per weight.
+                <br><br>
+                <table class="aboutWeightsTable">
+                    <tr class="aboutWeightsTableHeader">
+                        <th>size</th>
+                        <th>weight</th>
+                    </tr>
+                    <tr id="aboutSmall">
+                        <td>small</td>
+                        <td class="aboutUnit">1.5 oz</td>
+                    </tr>
+                    <tr id="aboutMedium">
+                        <td>medium</td>
+                        <td class="aboutUnit">1.75 oz</td>
+                    </tr>
+                    <tr id="aboutLarge">
+                        <td>large</td>
+                        <td class="aboutUnit">2 oz</td>
+                    </tr>
+                    <tr id="aboutXLarge">
+                        <td>x-large</td>
+                        <td class="aboutUnit">2.25 oz</td>
+                    </tr>
+                    <tr id="aboutJumbo">
+                        <td>jumbo</td>
+                        <td class="aboutUnit">2.5 oz</td>
+                    </tr>
+                </table>
+                <br>
+                <span class="contact">contact - cal@eggcalculator.com</span>
+                <span class="source">source code - <a href="https://github.com/mr-cal/egg-calculator">github</a></span>
+            </div>
+        </div>
+    </body>
+</html>
