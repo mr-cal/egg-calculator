@@ -1,0 +1,3 @@
+deployment:
+  tasks:
+    - /bin/cp -R src /home/pcbigkhq/eggcalculator.com/
