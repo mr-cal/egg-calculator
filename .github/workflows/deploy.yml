@@ -1,0 +1,18 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger vps-infra deploy
+        uses: peter-evans/repository-dispatch@v3
+        continue-on-error: true
+        with:
+          token: ${{ secrets.VPSINFRA_PAT }}
+          repository: mr-cal/vps-infra
+          event-type: egg-calculator-updated
